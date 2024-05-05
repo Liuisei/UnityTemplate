@@ -3,26 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class SoundManager : Singleton<SoundManager>
+public class SoundManager : BaseSingleton<SoundManager>
 {
-    [SerializeField]
-    AudioSource _bgmAudioSource;
+    [SerializeField] AudioSource _bgmAudioSource;
 
-    [SerializeField]
-    AudioSource _seAudioSource;
+    [SerializeField] AudioSource _seAudioSource;
 
-    [SerializeField]
-    List<BGMSoundData> _bgmSoundDataList;
+    [SerializeField] List<BGMSoundData> _bgmSoundDataList;
 
-    [SerializeField]
-    List<SeSoundData> _seSoundDataList;
+    [SerializeField] List<SeSoundData> _seSoundDataList;
 
-    //あとで設定データに移動
-    public float _masterVolume    = 1;
+    public float _masterVolume    = 1; //あとで設定データに移動
     public float _bgmMasterVolume = 1;
     public float _seMasterVolume  = 1;
-
-
     /// <summary>
     /// BGMを再生
     /// </summary>
@@ -34,7 +27,6 @@ public class SoundManager : Singleton<SoundManager>
         _bgmAudioSource.volume = data._volume * _bgmMasterVolume * _masterVolume;
         _bgmAudioSource.Play();
     }
-
     /// <summary>
     /// SEを再生
     /// </summary>
@@ -46,7 +38,7 @@ public class SoundManager : Singleton<SoundManager>
         _seAudioSource.PlayOneShot(data._audioClip);
     }
 
-    public override void AwakeFunction()
+    protected override void AwakeFunction()
     {
         if (_bgmAudioSource == null)  Debug.LogError("BGM AudioSource is null."); //nullチェック
         if (_seAudioSource  == null)  Debug.LogError("SE AudioSource is null.");
@@ -61,12 +53,10 @@ public class BGMSoundData
         Title, Dungeon, Hoge, // これがラベルになる
     }
 
-
     public BGM       _bgm;
     public AudioClip _audioClip;
 
-    [Range(0, 1)]
-    public float _volume = 1;
+    [Range(0, 1)] public float _volume = 1;
 }
 
 [System.Serializable]
@@ -74,12 +64,11 @@ public class SeSoundData
 {
     public enum SE
     {
-        Attack, Damage, Hoge // これがラベルになる
+        None, Attack, Damage, Hoge // これがラベルになる
     }
 
     public SE        _se;
     public AudioClip _audioClip;
 
-    [Range(0, 1)]
-    public float _volume = 1;
+    [Range(0, 1)] public float _volume = 1;
 }
