@@ -5,7 +5,7 @@ public abstract class BaseSingleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     public static      T    Instance { get; private set; }
     protected abstract void AwakeFunction();
-    public void Awake()
+    protected void Awake()
     {
         if (Instance == null)
         {
