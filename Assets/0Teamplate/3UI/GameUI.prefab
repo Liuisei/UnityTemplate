@@ -200,6 +200,7 @@ MonoBehaviour:
   _enterSe: {fileID: 8300000, guid: d95f9537864bc4746999c1867255bfed, type: 3}
   _clickedSe: {fileID: 8300000, guid: 8b074b16f6f43b74a8e6565f88ea9980, type: 3}
   _open: 1
+  _hideOther: 0
   _uiType: 2
 --- !u!111 &648986913502774055
 Animation:

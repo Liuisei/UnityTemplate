@@ -5,6 +5,7 @@ using UnityEngine.Serialization;
 public class UIButton : BaseButton
 {
     [SerializeField] private bool _open;
+    [SerializeField] private bool _hideOther;
 
     [SerializeField] private UITypeClass.EnumUIType _uiType;
 
