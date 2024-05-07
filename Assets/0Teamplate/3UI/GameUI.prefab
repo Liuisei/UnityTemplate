@@ -113,7 +113,8 @@ GameObject:
   - component: {fileID: 2268338719452723046}
   - component: {fileID: 7399431171646859117}
   - component: {fileID: 1501216542936835270}
-  - component: {fileID: 1341490763748929100}
+  - component: {fileID: 7304243203071794843}
+  - component: {fileID: 648986913502774055}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -178,7 +179,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1341490763748929100
+--- !u!114 &7304243203071794843
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,10 +188,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 6157566324046649616}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d5db1156520d5044910e4cc2cd519c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 15bc410e637c8e64ea92f86f9529cb4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pressedSprite: {fileID: 0}
-  _hoverSprite: {fileID: 0}
-  _enterSe: {fileID: 0}
-  _clickedSe: {fileID: 0}
+  _onClickUnityAction:
+    m_PersistentCalls:
+      m_Calls: []
+  _pressedSprite: {fileID: 5386265900654142596, guid: e0018e123761e344bb79ca44447aa41e, type: 3}
+  _hoverSprite: {fileID: -4903740992919648390, guid: e0018e123761e344bb79ca44447aa41e, type: 3}
+  _pressedAnimation: {fileID: 648986913502774055}
+  _enterSe: {fileID: 8300000, guid: d95f9537864bc4746999c1867255bfed, type: 3}
+  _clickedSe: {fileID: 8300000, guid: 8b074b16f6f43b74a8e6565f88ea9980, type: 3}
+  _open: 1
+  _uiType: 2
+--- !u!111 &648986913502774055
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6157566324046649616}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 64a2dab9e9975e445a4750a81d93e742, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 64a2dab9e9975e445a4750a81d93e742, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0

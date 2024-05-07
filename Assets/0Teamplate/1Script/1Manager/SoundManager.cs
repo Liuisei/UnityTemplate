@@ -4,13 +4,12 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Serialization;
 
+[DefaultExecutionOrder(-100)]
 public class SoundManager : BaseSingleton<SoundManager>
 {
     [SerializeField] AudioMixer  _audioMixer;
     [SerializeField] AudioSource _bgmAudioSource;
     [SerializeField] AudioSource _seAudioSource;
-
-
     protected override void AwakeFunction()
     {
         if (_bgmAudioSource == null)  Debug.LogError("BGM AudioSource is null."); //nullチェック
