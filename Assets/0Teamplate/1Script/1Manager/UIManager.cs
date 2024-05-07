@@ -15,7 +15,6 @@ public class UIManager : BaseSingleton<UIManager>
             Debug.LogError("UI Type not found");
             return;
         }
-
         if (targetUITypeClass._spawnedUI == null) { targetUITypeClass._spawnedUI = Instantiate(targetUITypeClass._uiPrefab, new Vector3(0, 0, 0), Quaternion.identity); }
         else { targetUITypeClass._spawnedUI.SetActive(true); }
     }
