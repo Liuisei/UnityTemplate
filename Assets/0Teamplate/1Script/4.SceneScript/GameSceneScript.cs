@@ -7,10 +7,10 @@ public class GameSceneScript : MonoBehaviour
 {
     void Start()
     {
-        GameSceneOpen();
+        GameUIOpen();
     }
 
-    void GameSceneOpen()
+    void GameUIOpen()
     {
         UIManager.Instance.ShowUI(UITypeClass.EnumUIType.Game);
     }

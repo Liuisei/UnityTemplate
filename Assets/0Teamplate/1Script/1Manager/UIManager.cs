@@ -6,7 +6,7 @@ using UnityEngine;
 public class UIManager : BaseSingleton<UIManager>
 {
     [SerializeField] private List<UITypeClass> _uiTypeList = new List<UITypeClass>();
-
+    
     public void ShowUI(UITypeClass.EnumUIType uiType)
     {
         var targetUITypeClass = _uiTypeList.Find(e => e._uiType == uiType);
@@ -15,6 +15,7 @@ public class UIManager : BaseSingleton<UIManager>
             Debug.LogError("UI Type not found");
             return;
         }
+
         if (targetUITypeClass._spawnedUI == null) { targetUITypeClass._spawnedUI = Instantiate(targetUITypeClass._uiPrefab, new Vector3(0, 0, 0), Quaternion.identity); }
         else { targetUITypeClass._spawnedUI.SetActive(true); }
     }
@@ -37,7 +38,7 @@ public class UIManager : BaseSingleton<UIManager>
 [Serializable]
 public class UITypeClass
 {
-    public enum EnumUIType { Empty,  Game, Settings, }
+    public enum EnumUIType { Empty,  Game, Settings, Title, }
 
     public                   EnumUIType _uiType;
     public                   GameObject _uiPrefab;

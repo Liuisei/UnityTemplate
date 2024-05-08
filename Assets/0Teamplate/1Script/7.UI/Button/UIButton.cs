@@ -19,7 +19,6 @@ public class UIButton : BaseButton
         else { UIManager.Instance.HideUI(_uiType); }
     }
     protected override void OnMouseDown()  {  }
-    protected override void OnMouseUp()    {  }
     protected override void OnMouseEnter() { }
     protected override void OnMouseExit()  { }
 }

@@ -548,26 +548,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 389421121625647069, guid: b78046bb3912de14bbf4449537b0c005, type: 3}
-      propertyPath: _uiTypeList.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 389421121625647069, guid: b78046bb3912de14bbf4449537b0c005, type: 3}
-      propertyPath: _uiTypeList.Array.data[0]._uiType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 389421121625647069, guid: b78046bb3912de14bbf4449537b0c005, type: 3}
-      propertyPath: _uiTypeList.Array.data[1]._uiType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 389421121625647069, guid: b78046bb3912de14bbf4449537b0c005, type: 3}
-      propertyPath: _uiTypeList.Array.data[0]._uiPrefab
-      value: 
-      objectReference: {fileID: 1524685634436199631, guid: 87433754f1a80284da8bd238c9805a63, type: 3}
-    - target: {fileID: 389421121625647069, guid: b78046bb3912de14bbf4449537b0c005, type: 3}
-      propertyPath: _uiTypeList.Array.data[1]._uiPrefab
-      value: 
-      objectReference: {fileID: 1250215781383772083, guid: c0cd442678b77c146839a76af1a574ac, type: 3}
     - target: {fileID: 6976634874084252903, guid: b78046bb3912de14bbf4449537b0c005, type: 3}
       propertyPath: m_Name
       value: UIManager
