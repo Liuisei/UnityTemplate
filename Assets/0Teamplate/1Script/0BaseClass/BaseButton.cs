@@ -25,7 +25,10 @@ public abstract class BaseButton : MonoBehaviour, IPointerDownHandler, IPointerU
     }
     protected abstract void OnClicked();
     protected abstract void OnMouseDown();
-    protected abstract void OnMouseUp();
+    public              void OnMouseUp()
+    {
+        if (_normalsSprite != null) { _buttonImage.sprite = _normalsSprite; } //   Change texture to hover state
+    }
     protected abstract void OnMouseEnter();
     protected abstract void OnMouseExit();
     public void OnPointerDown(PointerEventData eventData)
@@ -45,12 +48,7 @@ public abstract class BaseButton : MonoBehaviour, IPointerDownHandler, IPointerU
 
         OnMouseEnter();
     }
-    public void OnPointerExit(PointerEventData  eventData)
-    {
-        if (_normalsSprite != null) { _buttonImage.sprite = _normalsSprite; } //   Change texture to hover state
-
-        OnMouseExit();
-    }
+    public void OnPointerExit(PointerEventData  eventData) { OnMouseExit(); }
     public void OnPointerClick(PointerEventData eventData)
     {
         if (_pressedAnimation != null) { _pressedAnimation.Play(); }
