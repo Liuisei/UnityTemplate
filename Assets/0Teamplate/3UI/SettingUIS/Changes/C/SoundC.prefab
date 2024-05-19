@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3719323921352156462}
   - component: {fileID: 823472020971343732}
   m_Layer: 0
-  m_Name: Horizontal
+  m_Name: SoundC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
